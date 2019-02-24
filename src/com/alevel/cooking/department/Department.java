@@ -1,5 +1,6 @@
 package department;
 
+import SimpleList.MyArrayList;
 import cooker.Cooker;
 import menu.*;
 
@@ -11,7 +12,7 @@ public abstract class Department {
 
     protected Cooker chief;
 
-    public abstract ArrayList<String> cook(MenuPoint menuPoint);
+    public abstract MyArrayList<String> cook(MenuPoint menuPoint);
 
     protected String getDishComponent(String component) throws Exception{
         for (Cooker cooker : cookers) {

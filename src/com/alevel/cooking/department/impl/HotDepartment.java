@@ -1,5 +1,6 @@
 package department.impl;
 
+import SimpleList.MyArrayList;
 import cooker.Cooker;
 import department.Department;
 import menu.*;
@@ -16,8 +17,8 @@ public class HotDepartment extends Department {
     }
 
     @Override
-    public ArrayList<String> cook(MenuPoint  menuPoint) {
-        ArrayList<String> dish = new ArrayList<>();
+    public MyArrayList<String> cook(MenuPoint  menuPoint) {
+        MyArrayList<String> dish = new MyArrayList<>();
 //        Dish dish = new Dish();
         for (String component : MenuComponents.getComponents(menuPoint)) {
             try {

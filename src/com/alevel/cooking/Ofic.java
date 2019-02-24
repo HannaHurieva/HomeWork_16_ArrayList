@@ -1,4 +1,5 @@
 
+import SimpleList.MyArrayList;
 import menu.MenuComponents;
 import menu.MenuPoint;
 
@@ -22,19 +23,19 @@ public class Ofic {
 
     public void createOrder() {
         System.out.println(Arrays.toString(MenuPoint.getMenuList()));
-        ArrayList<MenuPoint> menuPoints = buildOrder();
+        MyArrayList<MenuPoint> menuPoints = buildOrder();
         //only test
         for (MenuPoint menuPoint : menuPoints) {
 //            if (menuPoint == null) break;
             System.out.println(menuPoint.toString().charAt(menuPoint.toString().length() - 1) +
-                    " " + MenuComponents.getDepartment(menuPoint).cook(menuPoint));
+                    " " + MenuComponents.getDepartment(menuPoint).cook(menuPoint).toString());
         }
 
     }
 
-    private ArrayList<MenuPoint> buildOrder() {
+    private MyArrayList<MenuPoint> buildOrder() {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<MenuPoint> order = new ArrayList<>();
+        MyArrayList<MenuPoint> order = new MyArrayList<>();
         boolean isFinish = false;
         while (!isFinish) {
             String menuPoint = scanner.nextLine();
