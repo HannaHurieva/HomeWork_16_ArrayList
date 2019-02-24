@@ -28,7 +28,7 @@ public class Ofic {
         for (MenuPoint menuPoint : menuPoints) {
 //            if (menuPoint == null) break;
             System.out.println(menuPoint.toString().charAt(menuPoint.toString().length() - 1) +
-                    " " + MenuComponents.getDepartment(menuPoint).cook(menuPoint).toString());
+                    " " + MenuComponents.getDepartment(menuPoint).cook(menuPoint));
         }
 
     }

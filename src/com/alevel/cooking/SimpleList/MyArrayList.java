@@ -46,6 +46,7 @@ public class MyArrayList<E> implements MyList<E> {
         } catch (ClassCastException ex) {
             ex.printStackTrace();
         }
+    }
 
         @Override
         public E get ( int index){
